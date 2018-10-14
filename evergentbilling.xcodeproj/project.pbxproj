@@ -10,6 +10,15 @@
 		0F757D64216BDC90008EB66F /* evergentbilling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F757D5A216BDC90008EB66F /* evergentbilling.framework */; };
 		0F757D69216BDC90008EB66F /* evergentbillingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757D68216BDC90008EB66F /* evergentbillingTests.swift */; };
 		0F757D6B216BDC90008EB66F /* evergentbilling.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F757D5D216BDC90008EB66F /* evergentbilling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F7A2E4A2172AAEA00E178F3 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E492172AAEA00E178F3 /* ProductRepository.swift */; };
+		0F7A2E6E2172B26C00E178F3 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E6D2172B26C00E178F3 /* IAPHelper.swift */; };
+		0F7A2E732172B29F00E178F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7A2E6F2172B29F00E178F3 /* Images.xcassets */; };
+		0F7A2E742172B29F00E178F3 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E702172B29F00E178F3 /* ProductCell.swift */; };
+		0F7A2E752172B29F00E178F3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E712172B29F00E178F3 /* MasterViewController.swift */; };
+		0F7A2E762172B29F00E178F3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E722172B29F00E178F3 /* DetailViewController.swift */; };
+		0F7A2E8A2172B52C00E178F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7A2E892172B52C00E178F3 /* Main.storyboard */; };
+		0F7A2E8E2172B83900E178F3 /* NavUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E8D2172B83900E178F3 /* NavUtil.swift */; };
+		0F7EFE62216DC1730095CA6E /* ProductListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EFE61216DC1730095CA6E /* ProductListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +38,15 @@
 		0F757D63216BDC90008EB66F /* evergentbillingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evergentbillingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F757D68216BDC90008EB66F /* evergentbillingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evergentbillingTests.swift; sourceTree = "<group>"; };
 		0F757D6A216BDC90008EB66F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F7A2E492172AAEA00E178F3 /* ProductRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		0F7A2E6D2172B26C00E178F3 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		0F7A2E6F2172B29F00E178F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0F7A2E702172B29F00E178F3 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		0F7A2E712172B29F00E178F3 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		0F7A2E722172B29F00E178F3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0F7A2E892172B52C00E178F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0F7A2E8D2172B83900E178F3 /* NavUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavUtil.swift; sourceTree = "<group>"; };
+		0F7EFE61216DC1730095CA6E /* ProductListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +89,17 @@
 		0F757D5C216BDC90008EB66F /* evergentbilling */ = {
 			isa = PBXGroup;
 			children = (
+				0F7A2E892172B52C00E178F3 /* Main.storyboard */,
+				0F7A2E722172B29F00E178F3 /* DetailViewController.swift */,
+				0F7A2E6F2172B29F00E178F3 /* Images.xcassets */,
+				0F7A2E712172B29F00E178F3 /* MasterViewController.swift */,
+				0F7A2E702172B29F00E178F3 /* ProductCell.swift */,
+				0F7A2E6D2172B26C00E178F3 /* IAPHelper.swift */,
+				0F7A2E492172AAEA00E178F3 /* ProductRepository.swift */,
 				0F757D5D216BDC90008EB66F /* evergentbilling.h */,
 				0F757D5E216BDC90008EB66F /* Info.plist */,
+				0F7EFE61216DC1730095CA6E /* ProductListController.swift */,
+				0F7A2E8D2172B83900E178F3 /* NavUtil.swift */,
 			);
 			path = evergentbilling;
 			sourceTree = "<group>";
@@ -148,6 +175,7 @@
 				TargetAttributes = {
 					0F757D59216BDC90008EB66F = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					0F757D62216BDC90008EB66F = {
 						CreatedOnToolsVersion = 9.4;
@@ -160,6 +188,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 0F757D50216BDC90008EB66F;
 			productRefGroup = 0F757D5B216BDC90008EB66F /* Products */;
@@ -177,6 +206,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7A2E8A2172B52C00E178F3 /* Main.storyboard in Resources */,
+				0F7A2E732172B29F00E178F3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +225,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7A2E752172B29F00E178F3 /* MasterViewController.swift in Sources */,
+				0F7A2E4A2172AAEA00E178F3 /* ProductRepository.swift in Sources */,
+				0F7A2E742172B29F00E178F3 /* ProductCell.swift in Sources */,
+				0F7A2E8E2172B83900E178F3 /* NavUtil.swift in Sources */,
+				0F7A2E762172B29F00E178F3 /* DetailViewController.swift in Sources */,
+				0F7A2E6E2172B26C00E178F3 /* IAPHelper.swift in Sources */,
+				0F7EFE62216DC1730095CA6E /* ProductListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +377,7 @@
 		0F757D6F216BDC90008EB66F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.evergent.evergentbilling;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +404,7 @@
 		0F757D70216BDC90008EB66F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +430,7 @@
 		0F757D72216BDC90008EB66F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7EAZWK96N;
 				INFOPLIST_FILE = evergentbillingTests/Info.plist;
@@ -407,6 +449,7 @@
 		0F757D73216BDC90008EB66F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7EAZWK96N;
 				INFOPLIST_FILE = evergentbillingTests/Info.plist;
