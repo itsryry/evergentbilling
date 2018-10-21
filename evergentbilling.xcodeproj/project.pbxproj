@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F74F832217BB41F0061DE56 /* UserTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F74F831217BB41F0061DE56 /* UserTranslator.swift */; };
+		0F74F835217BB45B0061DE56 /* UILoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F74F834217BB45B0061DE56 /* UILoginResponse.swift */; };
 		0F757D64216BDC90008EB66F /* evergentbilling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F757D5A216BDC90008EB66F /* evergentbilling.framework */; };
 		0F757D69216BDC90008EB66F /* evergentbillingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757D68216BDC90008EB66F /* evergentbillingTests.swift */; };
 		0F757D6B216BDC90008EB66F /* evergentbilling.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F757D5D216BDC90008EB66F /* evergentbilling.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,6 +21,19 @@
 		0F7A2E8A2172B52C00E178F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7A2E892172B52C00E178F3 /* Main.storyboard */; };
 		0F7A2E8E2172B83900E178F3 /* NavUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E8D2172B83900E178F3 /* NavUtil.swift */; };
 		0F7EFE62216DC1730095CA6E /* ProductListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7EFE61216DC1730095CA6E /* ProductListController.swift */; };
+		0FDC955C217B000100566143 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC955B217B000100566143 /* LoginViewController.swift */; };
+		0FDC955E217B019F00566143 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDC955D217B019F00566143 /* Login.storyboard */; };
+		0FDC9560217B11AB00566143 /* cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0FDC955F217B11AB00566143 /* cartfile */; };
+		0FDC9563217B144400566143 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC9562217B144400566143 /* Alamofire.framework */; };
+		0FDC956A217B1BB800566143 /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC9569217B1BB800566143 /* UserRepositoryImpl.swift */; };
+		0FDC956E217B26B600566143 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC956D217B26B600566143 /* RxAlamofire.framework */; };
+		0FDC9570217B26BA00566143 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC956F217B26BA00566143 /* RxBlocking.framework */; };
+		0FDC9572217B26BF00566143 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC9571217B26BF00566143 /* RxCocoa.framework */; };
+		0FDC9574217B26C100566143 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC9573217B26C100566143 /* RxSwift.framework */; };
+		0FDC9576217B26C500566143 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC9575217B26C500566143 /* RxTest.framework */; };
+		0FDC9579217B278C00566143 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC9578217B278C00566143 /* LoginRequest.swift */; };
+		0FDC957B217B290500566143 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC957A217B290500566143 /* LoginResponse.swift */; };
+		0FDC957D217B2AC900566143 /* IUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC957C217B2AC900566143 /* IUserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F74F831217BB41F0061DE56 /* UserTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTranslator.swift; sourceTree = "<group>"; };
+		0F74F834217BB45B0061DE56 /* UILoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILoginResponse.swift; sourceTree = "<group>"; };
 		0F757D5A216BDC90008EB66F /* evergentbilling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = evergentbilling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F757D5D216BDC90008EB66F /* evergentbilling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evergentbilling.h; sourceTree = "<group>"; };
 		0F757D5E216BDC90008EB66F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +64,19 @@
 		0F7A2E892172B52C00E178F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0F7A2E8D2172B83900E178F3 /* NavUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavUtil.swift; sourceTree = "<group>"; };
 		0F7EFE61216DC1730095CA6E /* ProductListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListController.swift; sourceTree = "<group>"; };
+		0FDC955B217B000100566143 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0FDC955D217B019F00566143 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		0FDC955F217B11AB00566143 /* cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartfile; sourceTree = "<group>"; };
+		0FDC9562217B144400566143 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		0FDC9569217B1BB800566143 /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
+		0FDC956D217B26B600566143 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		0FDC956F217B26BA00566143 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		0FDC9571217B26BF00566143 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		0FDC9573217B26C100566143 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		0FDC9575217B26C500566143 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		0FDC9578217B278C00566143 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		0FDC957A217B290500566143 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		0FDC957C217B2AC900566143 /* IUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +84,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDC9563217B144400566143 /* Alamofire.framework in Frameworks */,
+				0FDC956E217B26B600566143 /* RxAlamofire.framework in Frameworks */,
+				0FDC9570217B26BA00566143 /* RxBlocking.framework in Frameworks */,
+				0FDC9574217B26C100566143 /* RxSwift.framework in Frameworks */,
+				0FDC9572217B26BF00566143 /* RxCocoa.framework in Frameworks */,
+				0FDC9576217B26C500566143 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +104,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F74F830217BB4120061DE56 /* translators */ = {
+			isa = PBXGroup;
+			children = (
+				0F74F831217BB41F0061DE56 /* UserTranslator.swift */,
+			);
+			path = translators;
+			sourceTree = "<group>";
+		};
+		0F74F833217BB43D0061DE56 /* uimodel */ = {
+			isa = PBXGroup;
+			children = (
+				0F74F834217BB45B0061DE56 /* UILoginResponse.swift */,
+			);
+			path = uimodel;
+			sourceTree = "<group>";
+		};
 		0F757D50216BDC90008EB66F = {
 			isa = PBXGroup;
 			children = (
+				0FDC955F217B11AB00566143 /* cartfile */,
 				0F757D5C216BDC90008EB66F /* evergentbilling */,
 				0F757D67216BDC90008EB66F /* evergentbillingTests */,
 				0F757D5B216BDC90008EB66F /* Products */,
+				0FDC9561217B144400566143 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,17 +143,17 @@
 		0F757D5C216BDC90008EB66F /* evergentbilling */ = {
 			isa = PBXGroup;
 			children = (
+				0F74F833217BB43D0061DE56 /* uimodel */,
+				0FDC9577217B273A00566143 /* model */,
+				0FDC9568217B1B1200566143 /* utils */,
+				0FDC9567217B1ADF00566143 /* repositories */,
+				0FDC9564217B14DD00566143 /* viewcontrollers */,
 				0F7A2E892172B52C00E178F3 /* Main.storyboard */,
-				0F7A2E722172B29F00E178F3 /* DetailViewController.swift */,
 				0F7A2E6F2172B29F00E178F3 /* Images.xcassets */,
-				0F7A2E712172B29F00E178F3 /* MasterViewController.swift */,
 				0F7A2E702172B29F00E178F3 /* ProductCell.swift */,
-				0F7A2E6D2172B26C00E178F3 /* IAPHelper.swift */,
-				0F7A2E492172AAEA00E178F3 /* ProductRepository.swift */,
 				0F757D5D216BDC90008EB66F /* evergentbilling.h */,
 				0F757D5E216BDC90008EB66F /* Info.plist */,
-				0F7EFE61216DC1730095CA6E /* ProductListController.swift */,
-				0F7A2E8D2172B83900E178F3 /* NavUtil.swift */,
+				0FDC955D217B019F00566143 /* Login.storyboard */,
 			);
 			path = evergentbilling;
 			sourceTree = "<group>";
@@ -111,6 +165,59 @@
 				0F757D6A216BDC90008EB66F /* Info.plist */,
 			);
 			path = evergentbillingTests;
+			sourceTree = "<group>";
+		};
+		0FDC9561217B144400566143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FDC9575217B26C500566143 /* RxTest.framework */,
+				0FDC9573217B26C100566143 /* RxSwift.framework */,
+				0FDC9571217B26BF00566143 /* RxCocoa.framework */,
+				0FDC956F217B26BA00566143 /* RxBlocking.framework */,
+				0FDC956D217B26B600566143 /* RxAlamofire.framework */,
+				0FDC9562217B144400566143 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0FDC9564217B14DD00566143 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				0FDC955B217B000100566143 /* LoginViewController.swift */,
+				0F7EFE61216DC1730095CA6E /* ProductListController.swift */,
+				0F7A2E712172B29F00E178F3 /* MasterViewController.swift */,
+				0F7A2E722172B29F00E178F3 /* DetailViewController.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		0FDC9567217B1ADF00566143 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0F74F830217BB4120061DE56 /* translators */,
+				0F7A2E492172AAEA00E178F3 /* ProductRepository.swift */,
+				0FDC9569217B1BB800566143 /* UserRepositoryImpl.swift */,
+				0FDC957C217B2AC900566143 /* IUserRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		0FDC9568217B1B1200566143 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F7A2E8D2172B83900E178F3 /* NavUtil.swift */,
+				0F7A2E6D2172B26C00E178F3 /* IAPHelper.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		0FDC9577217B273A00566143 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0FDC9578217B278C00566143 /* LoginRequest.swift */,
+				0FDC957A217B290500566143 /* LoginResponse.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +315,8 @@
 			files = (
 				0F7A2E8A2172B52C00E178F3 /* Main.storyboard in Resources */,
 				0F7A2E732172B29F00E178F3 /* Images.xcassets in Resources */,
+				0FDC9560217B11AB00566143 /* cartfile in Resources */,
+				0FDC955E217B019F00566143 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,11 +336,18 @@
 			files = (
 				0F7A2E752172B29F00E178F3 /* MasterViewController.swift in Sources */,
 				0F7A2E4A2172AAEA00E178F3 /* ProductRepository.swift in Sources */,
+				0F74F835217BB45B0061DE56 /* UILoginResponse.swift in Sources */,
+				0FDC957D217B2AC900566143 /* IUserRepository.swift in Sources */,
+				0FDC957B217B290500566143 /* LoginResponse.swift in Sources */,
+				0F74F832217BB41F0061DE56 /* UserTranslator.swift in Sources */,
+				0FDC956A217B1BB800566143 /* UserRepositoryImpl.swift in Sources */,
 				0F7A2E742172B29F00E178F3 /* ProductCell.swift in Sources */,
 				0F7A2E8E2172B83900E178F3 /* NavUtil.swift in Sources */,
+				0FDC955C217B000100566143 /* LoginViewController.swift in Sources */,
 				0F7A2E762172B29F00E178F3 /* DetailViewController.swift in Sources */,
 				0F7A2E6E2172B26C00E178F3 /* IAPHelper.swift in Sources */,
 				0F7EFE62216DC1730095CA6E /* ProductListController.swift in Sources */,
+				0FDC9579217B278C00566143 /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,16 +497,24 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Z7EAZWK96N;
+				DEVELOPMENT_TEAM = 5VZVP3LR24;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = evergentbilling/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evergent.evergentbilling;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -408,16 +532,24 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Z7EAZWK96N;
+				DEVELOPMENT_TEAM = 5VZVP3LR24;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = evergentbilling/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evergent.evergentbilling;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
