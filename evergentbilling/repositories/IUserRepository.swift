@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol IUserRepository {
-    func login(request: LoginRequest) -> Single<UILoginResponse>
+    func login(_ loginRequest: LoginRequest) -> Observable<UILoginResponse>
 }

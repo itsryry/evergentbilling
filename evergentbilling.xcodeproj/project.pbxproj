@@ -12,6 +12,9 @@
 		0F757D64216BDC90008EB66F /* evergentbilling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F757D5A216BDC90008EB66F /* evergentbilling.framework */; };
 		0F757D69216BDC90008EB66F /* evergentbillingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757D68216BDC90008EB66F /* evergentbillingTests.swift */; };
 		0F757D6B216BDC90008EB66F /* evergentbilling.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F757D5D216BDC90008EB66F /* evergentbilling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F778B9221830A2D00377A04 /* AuthenticateCustomerReqMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F778B9121830A2D00377A04 /* AuthenticateCustomerReqMessage.swift */; };
+		0F778B9421830C4200377A04 /* AuthenticateCustomerRespMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F778B9321830C4200377A04 /* AuthenticateCustomerRespMessage.swift */; };
+		0F778B962185082800377A04 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F778B952185082800377A04 /* extensions.swift */; };
 		0F7A2E4A2172AAEA00E178F3 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E492172AAEA00E178F3 /* ProductRepository.swift */; };
 		0F7A2E6E2172B26C00E178F3 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A2E6D2172B26C00E178F3 /* IAPHelper.swift */; };
 		0F7A2E732172B29F00E178F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7A2E6F2172B29F00E178F3 /* Images.xcassets */; };
@@ -30,7 +33,6 @@
 		0FDC9570217B26BA00566143 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC956F217B26BA00566143 /* RxBlocking.framework */; };
 		0FDC9572217B26BF00566143 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC9571217B26BF00566143 /* RxCocoa.framework */; };
 		0FDC9574217B26C100566143 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC9573217B26C100566143 /* RxSwift.framework */; };
-		0FDC9576217B26C500566143 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC9575217B26C500566143 /* RxTest.framework */; };
 		0FDC9579217B278C00566143 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC9578217B278C00566143 /* LoginRequest.swift */; };
 		0FDC957B217B290500566143 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC957A217B290500566143 /* LoginResponse.swift */; };
 		0FDC957D217B2AC900566143 /* IUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC957C217B2AC900566143 /* IUserRepository.swift */; };
@@ -55,6 +57,9 @@
 		0F757D63216BDC90008EB66F /* evergentbillingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evergentbillingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F757D68216BDC90008EB66F /* evergentbillingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evergentbillingTests.swift; sourceTree = "<group>"; };
 		0F757D6A216BDC90008EB66F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F778B9121830A2D00377A04 /* AuthenticateCustomerReqMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateCustomerReqMessage.swift; sourceTree = "<group>"; };
+		0F778B9321830C4200377A04 /* AuthenticateCustomerRespMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateCustomerRespMessage.swift; sourceTree = "<group>"; };
+		0F778B952185082800377A04 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		0F7A2E492172AAEA00E178F3 /* ProductRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 		0F7A2E6D2172B26C00E178F3 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		0F7A2E6F2172B29F00E178F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -89,7 +94,6 @@
 				0FDC9570217B26BA00566143 /* RxBlocking.framework in Frameworks */,
 				0FDC9574217B26C100566143 /* RxSwift.framework in Frameworks */,
 				0FDC9572217B26BF00566143 /* RxCocoa.framework in Frameworks */,
-				0FDC9576217B26C500566143 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,7 @@
 		0F757D5C216BDC90008EB66F /* evergentbilling */ = {
 			isa = PBXGroup;
 			children = (
+				0F778B90218309F400377A04 /* presenters */,
 				0F74F833217BB43D0061DE56 /* uimodel */,
 				0FDC9577217B273A00566143 /* model */,
 				0FDC9568217B1B1200566143 /* utils */,
@@ -165,6 +170,13 @@
 				0F757D6A216BDC90008EB66F /* Info.plist */,
 			);
 			path = evergentbillingTests;
+			sourceTree = "<group>";
+		};
+		0F778B90218309F400377A04 /* presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenters;
 			sourceTree = "<group>";
 		};
 		0FDC9561217B144400566143 /* Frameworks */ = {
@@ -207,6 +219,7 @@
 			children = (
 				0F7A2E8D2172B83900E178F3 /* NavUtil.swift */,
 				0F7A2E6D2172B26C00E178F3 /* IAPHelper.swift */,
+				0F778B952185082800377A04 /* extensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -216,6 +229,8 @@
 			children = (
 				0FDC9578217B278C00566143 /* LoginRequest.swift */,
 				0FDC957A217B290500566143 /* LoginResponse.swift */,
+				0F778B9121830A2D00377A04 /* AuthenticateCustomerReqMessage.swift */,
+				0F778B9321830C4200377A04 /* AuthenticateCustomerRespMessage.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -334,6 +349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F778B9421830C4200377A04 /* AuthenticateCustomerRespMessage.swift in Sources */,
+				0F778B962185082800377A04 /* extensions.swift in Sources */,
+				0F778B9221830A2D00377A04 /* AuthenticateCustomerReqMessage.swift in Sources */,
 				0F7A2E752172B29F00E178F3 /* MasterViewController.swift in Sources */,
 				0F7A2E4A2172AAEA00E178F3 /* ProductRepository.swift in Sources */,
 				0F74F835217BB45B0061DE56 /* UILoginResponse.swift in Sources */,

@@ -8,6 +8,14 @@
 
 import Foundation
 
-class LoginResponse {
+class LoginResponse: Codable {
+    var response: AuthenticateCustomerRespMessage
     
+    init(_ response: AuthenticateCustomerRespMessage) {
+        self.response = response
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case response = "AuthenticateCustomerRespMessage"
+    }
 }

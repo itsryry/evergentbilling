@@ -8,6 +8,15 @@
 
 import Foundation
 
-class LoginRequest {
+class LoginRequest: Codable {
+
+    var customer: AuthenticateCustomerReqMessage
+
+    init(_ username: String, _ password: String) {
+        customer = AuthenticateCustomerReqMessage(username, password)
+    }
     
+    enum CodingKeys: String, CodingKey {
+        case customer = "AuthenticateCustomerReqMessage"
+    }
 }
