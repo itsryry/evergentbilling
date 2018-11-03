@@ -11,4 +11,5 @@ import RxSwift
 
 protocol IUserRepository {
     func login(_ loginRequest: LoginRequest) -> Observable<UILoginResponse>
+    func getProducts() -> Observable<UIProducts>
 }

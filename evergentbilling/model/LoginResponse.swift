@@ -7,15 +7,27 @@
 //
 
 import Foundation
+import CodableKeychain
 
-class LoginResponse: Codable {
+class LoginResponse: KeychainStorable {
     var response: AuthenticateCustomerRespMessage
     
     init(_ response: AuthenticateCustomerRespMessage) {
         self.response = response
     }
     
+    init(_ status: String) {
+        self.response = AuthenticateCustomerRespMessage(status)
+    }
+    
     enum CodingKeys: String, CodingKey {
         case response = "AuthenticateCustomerRespMessage"
     }
+}
+
+extension LoginResponse {
+    
+    var account: String { return response.firstName }
+    var accessible: Keychain.AccessibleOption { return .whenPasscodeSetThisDeviceOnly }
+    
 }

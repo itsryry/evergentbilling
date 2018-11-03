@@ -10,63 +10,35 @@ import Foundation
 import UIKit
 import RxSwift
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, ILoginView {
 
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    var userRepository: IUserRepository = UserRepositoryImpl()
-    var disposables: DisposeBag = DisposeBag()
+    var presenter: ILoginPresenter? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        loginField.text = "inappapi"
-//        passwordField.text = "pa$$word1"
+        loginField.text = "inappapi"
+        passwordField.text = "pa$$word1"
         self.title = "Login"
+        
+        self.presenter = LoginPresenter(self)
     }
     
-    func validField(_ field:UITextField, _ message:String) -> String?
-    {
-        if let fieldValue = field.text, fieldValue != ""
-        { return fieldValue }
-        OperationQueue.main.addOperation
-            { self.showAlert(title: "Error!", message: message) }
-        return nil
-    }
-    
-    // TODO: Move api call & logic inside view model
     @IBAction func onLoginPressed(_ sender: Any) {
-        guard let username  = validField(loginField, "Username is required. Please enter your username"),
-            let password = validField(passwordField,"Password is required. Please enter your password")
+        guard let username  = self.presenter?.validField((loginField?.text)!, "Username is required. Please enter your username"),
+            let password = self.presenter?.validField((passwordField?.text)!,"Password is required. Please enter your password")
             else  { return }
-        
-            // proceed with valid data ...
-            let request = LoginRequest(username, password)
-        
-        NavUtil.showActivityIndicator(view: self.view, withOpaqueOverlay: true)
-        userRepository.login(request)
-            .subscribe(onNext: { response in
-                NavUtil.hideActivityIndicator(view: self.view)
-                switch response.status {
-                case .SUCCESS:
-                    self.navigationController?.pushViewController(NavUtil.getProductVC(), animated: true)
-                case .FAIL:
-                    self.showAlert(title: "Error", message: "Login has failed.")
-                    self.passwordField.text = ""
-                }
-            },
-            onError: { error in
-                self.showAlert(title: "Error", message: error.localizedDescription)
-            })
-            .disposed(by: disposables)
+        presenter?.login(username, password)
     }
     
+    func clearPassword() {
+        self.passwordField.text = ""
+    }
     
-    func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message:
-            message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
+    func navigateToProductList() {
+        self.navigationController?.pushViewController(NavUtil.getProductVC(), animated: true)
     }
 }

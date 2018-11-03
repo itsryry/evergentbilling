@@ -28,13 +28,13 @@
 
 import Foundation
 
-public struct ProductRepository {
+public struct StoreRepository {
   
     public static let consumable = "com.evergent.sampleinapp.consumable"
   
-  private static let productIdentifiers: Set<ProductIdentifier> = [ProductRepository.consumable]
+  private static let productIdentifiers: Set<ProductIdentifier> = [StoreRepository.consumable]
 
-  public static let store = IAPHelper(productIds: ProductRepository.productIdentifiers)
+  public static let store = IAPHelper(productIds: StoreRepository.productIdentifiers)
 }
 
 func resourceNameForProductIdentifier(_ productIdentifier: String) -> String? {

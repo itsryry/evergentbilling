@@ -8,14 +8,10 @@
 
 import Foundation
 
-enum LoginStatus {
-    case SUCCESS, FAIL
-}
-
 class UILoginResponse {
-    var status: LoginStatus
+    var status: ApiStatus
     
-    init(_ status: LoginStatus) {
+    init(_ status: ApiStatus) {
         self.status = status
     }
 }

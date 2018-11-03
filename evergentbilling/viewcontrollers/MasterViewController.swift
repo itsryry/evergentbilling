@@ -28,12 +28,12 @@
 
 import UIKit
 import StoreKit
+import RxSwift
 
-class MasterViewController: UITableViewController {
-  
+class MasterViewController: UITableViewController, IProductsView {
+
   let showDetailSegueIdentifier = "showDetail"
-  
-  var products: [SKProduct] = []
+  var presenter: IProductPresenter? = nil
   
   override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
     if identifier == showDetailSegueIdentifier {
@@ -41,9 +41,9 @@ class MasterViewController: UITableViewController {
         return false
       }
       
-      let product = products[(indexPath as NSIndexPath).row]
+      let product = self.presenter?.getCurrentProducts()[(indexPath as NSIndexPath).row]
       
-      return ProductRepository.store.isProductPurchased(product.productIdentifier)
+        return (self.presenter?.isStorePurchased((product?.sku)!))!
     }
     
     return true
@@ -53,9 +53,9 @@ class MasterViewController: UITableViewController {
     if segue.identifier == showDetailSegueIdentifier {
       guard let indexPath = tableView.indexPathForSelectedRow else { return }
       
-      let product = products[(indexPath as NSIndexPath).row]
+      let product = self.presenter?.getCurrentProducts()[(indexPath as NSIndexPath).row]
       
-      if let name = resourceNameForProductIdentifier(product.productIdentifier),
+        if let name = resourceNameForProductIdentifier((product?.sku)!),
              let detailViewController = segue.destination as? DetailViewController {
         let image = UIImage(named: name)
         detailViewController.image = image
@@ -66,7 +66,7 @@ class MasterViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "RazeFaces"
+    title = "Products"
     
     refreshControl = UIRefreshControl()
     refreshControl?.addTarget(self, action: #selector(MasterViewController.reload), for: .valueChanged)
@@ -80,40 +80,36 @@ class MasterViewController: UITableViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(MasterViewController.handlePurchaseNotification(_:)),
                                            name: .IAPHelperPurchaseNotification,
                                            object: nil)
+    
+    self.presenter = ProductsPresenter(self)
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-
     reload()
   }
   
   @objc func reload() {
-    products = []
-    
-    tableView.reloadData()
-    
-    ProductRepository.store.requestProducts{ [weak self] success, products in
-      guard case self = self else { return }
-      if success {
-        self?.products = products!
-        
-        self?.tableView.reloadData()
-      }
-      
-      self?.refreshControl?.endRefreshing()
-    }
+    self.presenter?.showProducts()
   }
   
   @objc func restoreTapped(_ sender: AnyObject) {
-    ProductRepository.store.restorePurchases()
+    StoreRepository.store.restorePurchases()
   }
+    
+    func reloadTable(products: [UIProduct]) {
+        self.tableView.reloadData()
+    }
+
+    func endRefreshing() {
+        self.refreshControl?.endRefreshing()
+    }
 
   @objc func handlePurchaseNotification(_ notification: Notification) {
     guard
       let productID = notification.object as? String,
-      let index = products.index(where: { product -> Bool in
-        product.productIdentifier == productID
+      let index = self.presenter?.getCurrentProducts().index(where: { product -> Bool in
+        product.sku == productID
       })
     else { return }
 
@@ -126,18 +122,19 @@ class MasterViewController: UITableViewController {
 extension MasterViewController {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return products.count
+    return self.presenter?.getCurrentProducts().count ?? 0
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ProductCell
     
-    let product = products[(indexPath as NSIndexPath).row]
+    let product = self.presenter?.getCurrentProducts()[(indexPath as NSIndexPath).row]
     
     cell.product = product
-    cell.buyButtonHandler = { product in
-      ProductRepository.store.buyProduct(product)
-    }
+    
+//    cell.buyButtonHandler = { product in
+//      ProductRepository.store.buyProduct(product)
+//    }
     
     return cell
   }

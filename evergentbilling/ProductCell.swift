@@ -30,30 +30,22 @@ import UIKit
 import StoreKit
 
 class ProductCell: UITableViewCell {
-  static let priceFormatter: NumberFormatter = {
-    let formatter = NumberFormatter()
-    
-    formatter.formatterBehavior = .behavior10_4
-    formatter.numberStyle = .currency
-    
-    return formatter
-  }()
   
-  var buyButtonHandler: ((_ product: SKProduct) -> Void)?
+  var buyButtonHandler: ((_ product: UIProduct) -> Void)?
   
-  var product: SKProduct? {
+  var product: UIProduct? {
     didSet {
       guard let product = product else { return }
 
-      textLabel?.text = product.localizedTitle
+      textLabel?.text = product.name
 
-      if ProductRepository.store.isProductPurchased(product.productIdentifier) {
+      if StoreRepository.store.isProductPurchased(product.sku) {
         accessoryType = .checkmark
         accessoryView = nil
         detailTextLabel?.text = ""
       } else if IAPHelper.canMakePayments() {
-        ProductCell.priceFormatter.locale = product.priceLocale
-        detailTextLabel?.text = ProductCell.priceFormatter.string(from: product.price)
+
+        detailTextLabel?.text = product.price
 
         accessoryType = .none
         accessoryView = self.newBuyButton()
