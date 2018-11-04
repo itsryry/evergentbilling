@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import StoreKit
 
 protocol IProductPresenter {
     func showProducts()
     func isStorePurchased(_ sku: String) -> Bool
     func restorePurchases()
     func getCurrentProducts() -> [UIProduct]
+    func getSkProductFor(sku: String) -> SKProduct?
+    func buyProduct(sku: String)
 }

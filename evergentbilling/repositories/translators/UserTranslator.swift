@@ -44,9 +44,7 @@ class UserTranslator {
             uiProducts.status = ApiStatus.SUCCESS
         }
 
-        // TODO updated with api provided value
         for product in parsedData.getPackagesResponseMessage.packagesResponseMessage {
-            // TODO: Update with api provided identifier once they add the field
             priceFormatter.currencyCode = product.currencyCode
             let uiProduct = UIProduct(name: product.displayName, price: priceFormatter.string(for: product.retailPrice)!, type: product.displayName, sku: product.skuORQuickCode)
             uiProducts.products.append(uiProduct)

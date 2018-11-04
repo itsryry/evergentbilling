@@ -31,8 +31,9 @@ import Foundation
 public struct StoreRepository {
   
     public static let consumable = "com.evergent.sampleinapp.consumable"
-  
-  private static let productIdentifiers: Set<ProductIdentifier> = [StoreRepository.consumable]
+    public static let monthlyAutoRenewable = "com.evergent.sampleinapp.monthlyautorenewable"
+
+  private static let productIdentifiers: Set<ProductIdentifier> = [StoreRepository.consumable, StoreRepository.monthlyAutoRenewable]
 
   public static let store = IAPHelper(productIds: StoreRepository.productIdentifiers)
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import StoreKit
 
 class ProductsPresenter: IProductPresenter {
     
@@ -15,21 +16,33 @@ class ProductsPresenter: IProductPresenter {
     var userRepository: IUserRepository = UserRepositoryImpl()
     var disposables: DisposeBag = DisposeBag()
     var products: [UIProduct]
+    var skProducts: [SKProduct]
     
     init(_ productsView: IProductsView) {
         self.productsView = productsView
         self.products = []
+        self.skProducts = []
     }
     
     func showProducts() {
-        userRepository.getProducts().subscribe(onNext: { response in
-            self.products = response.products
-            self.productsView.reloadTable(products: response.products)
-            self.productsView.endRefreshing()
-        }, onError: { error in
-            self.productsView.endRefreshing()
-            self.productsView.showAlert(title: "Error", message: error.localizedDescription)
-        }).disposed(by: disposables)
+        StoreRepository.store.requestProducts { result, products in
+            switch (result) {
+            case true:
+                if case self.skProducts = products {
+                    self.userRepository.getProducts().subscribe(onNext: { response in
+                        self.products = response.products
+                        self.productsView.reloadTable(products: response.products)
+                        self.productsView.endRefreshing()
+                    }, onError: { error in
+                        self.productsView.endRefreshing()
+                        self.productsView.showAlert(title: "Error", message: "Could not get products from Evergent due to: \n" + error.localizedDescription)
+                    }).disposed(by: self.disposables)
+                }
+            case false:
+                self.productsView.endRefreshing()
+                self.productsView.showAlert(title: "Error", message: "Could not get products from app store.")
+            }
+        }
     }
     
     func isStorePurchased(_ sku: String) -> Bool {
@@ -42,5 +55,20 @@ class ProductsPresenter: IProductPresenter {
     
     func restorePurchases() {
         StoreRepository.store.restorePurchases()
+    }
+    
+    
+    func buyProduct(sku: String) {
+        if let skProduct = getSkProductFor(sku: sku) {
+            StoreRepository.store.buyProduct(skProduct)
+        } else {
+            self.productsView.showAlert(title: "Error", message: "Cannot find matching evergent product in app store.")
+        }
+    }
+    
+    func getSkProductFor(sku: String) -> SKProduct? {
+        return skProducts.filter { skProduct in
+            skProduct.productIdentifier == sku
+        }.first
     }
 }
