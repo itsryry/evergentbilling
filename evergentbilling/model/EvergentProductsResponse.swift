@@ -24,7 +24,7 @@ struct PackagesResponseMessage: Codable {
     let bbDescription, currencyCode, packageName: String
     let renewable: Bool
     let period, displayName: String
-    let appChannels: [AppChannel]? = nil
+    let appChannels: [AppChannel]
     let skuORQuickCode: String
     let basicService: Bool
     

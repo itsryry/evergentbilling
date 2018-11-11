@@ -46,7 +46,7 @@ class UserTranslator {
 
         for product in parsedData.getPackagesResponseMessage.packagesResponseMessage {
             priceFormatter.currencyCode = product.currencyCode
-            let uiProduct = UIProduct(name: product.displayName, price: priceFormatter.string(for: product.retailPrice)!, type: product.displayName, sku: product.skuORQuickCode)
+            let uiProduct = UIProduct(name: product.appChannels[0].appName, price: priceFormatter.string(for: product.retailPrice)!, type: product.displayName, sku: product.appChannels[0].appID)
             uiProducts.products.append(uiProduct)
         }
 

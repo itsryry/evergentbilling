@@ -15,12 +15,12 @@ class ProductsPresenter: IProductPresenter {
     var productsView: IProductsView
     var userRepository: IUserRepository = UserRepositoryImpl()
     var disposables: DisposeBag = DisposeBag()
-    var products: [UIProduct]
-    var skProducts: [SKProduct]
+    var uiProducts: [UIProduct]
+    var skProducts: [SKProduct]? = nil
     
     init(_ productsView: IProductsView) {
         self.productsView = productsView
-        self.products = []
+        self.uiProducts = []
         self.skProducts = []
     }
     
@@ -28,9 +28,10 @@ class ProductsPresenter: IProductPresenter {
         StoreRepository.store.requestProducts { result, products in
             switch (result) {
             case true:
-                if case self.skProducts = products {
+                if (!(products?.isEmpty)!) {
+                    self.skProducts = products
                     self.userRepository.getProducts().subscribe(onNext: { response in
-                        self.products = response.products
+                        self.uiProducts = response.products
                         self.productsView.reloadTable(products: response.products)
                         self.productsView.endRefreshing()
                     }, onError: { error in
@@ -50,7 +51,7 @@ class ProductsPresenter: IProductPresenter {
     }
     
     func getCurrentProducts() -> [UIProduct] {
-        return self.products
+        return self.uiProducts
     }
     
     func restorePurchases() {
@@ -67,8 +68,8 @@ class ProductsPresenter: IProductPresenter {
     }
     
     func getSkProductFor(sku: String) -> SKProduct? {
-        return skProducts.filter { skProduct in
+        return skProducts?.filter { skProduct in
             skProduct.productIdentifier == sku
-        }.first
+        }.first ?? nil
     }
 }
