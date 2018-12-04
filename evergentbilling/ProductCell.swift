@@ -39,11 +39,13 @@ class ProductCell: UITableViewCell {
 
       textLabel?.text = product.name
 
-      if StoreRepository.store.isProductPurchased(product.sku) {
-        accessoryType = .checkmark
-        accessoryView = nil
-        detailTextLabel?.text = ""
-      } else if IAPHelper.canMakePayments() {
+//      if StoreRepository.store.isProductPurchased(product.sku) {
+//        accessoryType = .checkmark
+//        accessoryView = nil
+//        detailTextLabel?.text = ""
+//      } else
+//
+        if IAPHelper.canMakePayments() {
 
         detailTextLabel?.text = product.price
 

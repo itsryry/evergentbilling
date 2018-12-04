@@ -35,20 +35,20 @@ public class NavUtil {
             overlay.center = superView.center
             overlay.isHidden = false
             superView.addSubview(overlay)
-            superView.bringSubview(toFront: overlay)
+            superView.bringSubviewToFront(overlay)
             
             // now we'll work on adding the indicator to the overlay (now superView)
             superView = overlay
         }
         
-        let indicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        let indicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
         
         indicator.center = superView.center
         indicator.tag = activityIndicatorViewTag
         indicator.isHidden = false
         
         superView.addSubview(indicator)
-        superView.bringSubview(toFront: indicator)
+        superView.bringSubviewToFront(indicator)
         
         indicator.startAnimating()
         

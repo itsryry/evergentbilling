@@ -1,3 +1,2 @@
 github "RxSwiftCommunity/RxAlamofire" "master"
-github "jrendel/SwiftKeychainWrapper" ~> 3.0
 github "toddkramer/CodableKeychain" ~> 0.8.1
